@@ -31,3 +31,10 @@ app.post('/saveChatMsg', async (req, res) => {
       res.status(500).send('Error saving chat message');
     }
   });
+
+  
+   // 启动服务器
+   const port = process.env.PORT || 3000;
+   app.listen(port, () => {
+     console.log(`Server running on port ${port}`);
+   });
